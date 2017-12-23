@@ -1,1 +1,1 @@
-# Ng-Bootstrap-starter-template
+# Ng Bootstrap starter template
