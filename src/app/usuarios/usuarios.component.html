@@ -1,0 +1,38 @@
+<p>
+  Exibindo {{ users.length }} usuarios.
+</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th data-field="name">Nome</th>
+    <th data-field="name">Sobrenome</th>
+    <th data-field="name">Edit</th>
+    <th data-field="name">Delete</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.nome }}</td>
+      <td>{{ user.sobrenome }}</td>
+      <td>
+        <a >
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </td>
+      <td>
+        <a (click)="deleteUser(user)" href="">
+          <i class="material-icons">delete</i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-large waves-effect waves-light green"
+     routerLink="/users/new">
+    <i class="material-icons">add</i>
+  </a>
+</div>
